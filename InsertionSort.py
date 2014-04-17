@@ -7,26 +7,26 @@ def insertionSort(lista):
     ciclos = 0
 
     for i in range(1, n):
+        val = lista[i]
         j = i
 
-        while j > 0 and lista[j] < lista[j - 1]:
-            ciclos += 1
-            lista[j], lista[j-1] = lista[j-1], lista[j]
+        while j > 0 and lista[j - 1] > val:
+            lista[j] = lista[j-1]
             j -= 1
+            ciclos += 1
 
-    return lista, ciclos
+        lista[j] = val
+        
+    return ciclos
 
 
 lista = [36, 71, 16, 21, 73, 9, 0, 40, 66, 5]
 
-print "Lista de números desordenados:"
-print lista, "\n"
-
 t0 = time()
-lista, ciclos = insertionSort(lista)
+ciclos = insertionSort(lista)
 t1 = time()
 
-print "Lista de números ordenados:"
+print "Lista ordenada:"
 print lista, "\n"
 
 print "Tiempo: {0:f} segundos".format(t1 - t0)
