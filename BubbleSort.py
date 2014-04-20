@@ -6,9 +6,10 @@ def bubbleSort(lista):
     global comparaciones
     n = len(lista)
 
-    for i in range(1,n-1):
-        for j in range(n-i):
+    for i in xrange(n-1, 0, -1):
+        for j in xrange(i):
             comparaciones += 1
+
             if lista[j] > lista[j+1]:
                 lista[j], lista[j+1] = lista[j+1], lista[j]
 

@@ -6,7 +6,7 @@ def insertionSort(lista):
     n = len(lista)
     global comparaciones
 
-    for i in range(1, n):
+    for i in xrange(1, n):
         val = lista[i]
         j = i
 
