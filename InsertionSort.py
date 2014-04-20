@@ -29,4 +29,4 @@ print "Lista ordenada:"
 print lista, "\n"
 
 print "Tiempo: {0:f} segundos".format(t1 - t0)
-print "Ciclos:", comparaciones
+print "Comparaciones:", comparaciones
