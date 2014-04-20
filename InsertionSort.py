@@ -4,7 +4,7 @@ from time import time
 
 def insertionSort(lista):
     n = len(lista)
-    global ciclos
+    global comparaciones
 
     for i in range(1, n):
         val = lista[i]
@@ -13,20 +13,20 @@ def insertionSort(lista):
         while j > 0 and lista[j - 1] > val:
             lista[j] = lista[j-1]
             j -= 1
-            ciclos += 1
+            comparaciones += 1
 
         lista[j] = val
 
 
 lista = [36, 71, 16, 21, 73, 9, 0, 40, 66, 5]
-ciclos = 0
+comparaciones = 0
 
 t0 = time()
-ciclos = insertionSort(lista)
+insertionSort(lista)
 t1 = time()
 
 print "Lista ordenada:"
 print lista, "\n"
 
 print "Tiempo: {0:f} segundos".format(t1 - t0)
-print "Ciclos:", ciclos
+print "Ciclos:", comparaciones
