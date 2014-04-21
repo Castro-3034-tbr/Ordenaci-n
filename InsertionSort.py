@@ -10,7 +10,7 @@ def insertionSort(lista):
         val = lista[i]
         j = i
 
-        while j > 0 and lista[j - 1] > val:
+        while j > 0 and lista[j-1] > val:
             lista[j] = lista[j-1]
             j -= 1
             comparaciones += 1
