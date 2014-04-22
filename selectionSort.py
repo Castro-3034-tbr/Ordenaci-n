@@ -14,8 +14,7 @@ def selectionSort(lista):
             if lista[j] < lista[menor]:
                 menor = j
 
-        if menor != i:
-            lista[i], lista[menor] = lista[menor], lista[i]
+        lista[i], lista[menor] = lista[menor], lista[i]
 
 
 lista = [36, 71, 16, 21, 73, 9, 0, 40, 66, 5]
