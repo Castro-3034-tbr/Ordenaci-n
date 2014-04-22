@@ -6,11 +6,11 @@ def selectionSort(lista):
     global comparaciones
     n = len(lista)
 
-    for i in range(n - 1):
+    for i in xrange(n - 1):
         menor = i
         comparaciones += 1
 
-        for j in range(i + 1, n):
+        for j in xrange(i + 1, n):
             if lista[j] < lista[menor]:
                 menor = j
 
