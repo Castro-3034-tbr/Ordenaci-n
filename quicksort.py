@@ -3,10 +3,13 @@
 from time import time
 
 def particion(lista, izq, der):
+	global comparaciones
 	pivote = lista[der]
 	indice = izq
 
 	for i in xrange(izq, der):
+		comparaciones += 1
+		
 		if lista[i] <= pivote:
 			lista[indice], lista[i] = lista[i], lista[indice]
 			indice += 1
